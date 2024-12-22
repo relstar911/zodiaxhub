@@ -1,9 +1,9 @@
-# ZodiaxHub - Company TCG Digital Platform
+# ZodiaxHub - Trading Card Game Platform
 
-## Overview
-ZodiaxHub is a digital platform for Company TCG, a unique trading card game featuring rich lore, strategic gameplay, and innovative mechanics. The platform provides a comprehensive environment for players to build decks, duel opponents, and participate in the evolving world of Company TCG.
+## Project Overview
+ZodiaxHub is a modern trading card game platform that combines traditional TCG mechanics with innovative digital features. The platform allows users to create, collect, and battle with unique cards based on zodiac-inspired themes and power signs.
 
-## Features
+## Core Features
 
 ### Core Game Features
 - **Deck Building & Management**: Create and manage decks with 60-100 cards
@@ -42,54 +42,94 @@ ZodiaxHub is a digital platform for Company TCG, a unique trading card game feat
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB
-- npm or yarn
+```bash
+Node.js >= 14.x
+npm >= 6.x
+MongoDB >= 4.x
+```
 
 ### Installation
+
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/zodiaxhub.git
+git clone https://github.com/relstar911/zodiaxhub.git
+cd zodiaxhub
 ```
 
-2. Install backend dependencies:
-```bash
-cd backend
-npm install
-```
-
-3. Install frontend dependencies:
+2. Install frontend dependencies:
 ```bash
 cd frontend
 npm install
 ```
 
-4. Set up environment variables:
-- Create `.env` in backend directory:
-```
-PORT=5000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-FRONTEND_URL=http://localhost:3001
-```
-- Create `.env` in frontend directory:
-```
-PORT=3001
-REACT_APP_API_URL=http://localhost:5000
-REACT_APP_WS_URL=ws://localhost:5000
+3. Install backend dependencies:
+```bash
+cd ../backend
+npm install
 ```
 
-5. Start the development servers:
-- Backend: `npm run dev`
-- Frontend: `npm start`
+4. Set up environment variables:
+```bash
+# Frontend (.env)
+REACT_APP_API_URL=http://localhost:3001
+REACT_APP_WS_URL=ws://localhost:3001
+
+# Backend (.env)
+PORT=3001
+MONGODB_URI=mongodb://localhost:27017/zodiaxhub
+JWT_SECRET=your_jwt_secret
+```
+
+5. Start development servers:
+```bash
+# Terminal 1 (Frontend)
+cd frontend
+npm start
+
+# Terminal 2 (Backend)
+cd backend
+npm run dev
+```
+
+## Development Guidelines
+
+### Code Style
+- Use TypeScript for type safety
+- Follow React best practices and hooks
+- Implement proper error handling
+- Write comprehensive documentation
+- Use meaningful commit messages
+
+### Component Structure
+- Keep components modular and reusable
+- Implement proper prop typing
+- Use custom hooks for logic separation
+- Follow atomic design principles
+
+### State Management
+- Use React Context for global state
+- Implement proper data flow
+- Handle loading and error states
+- Maintain type safety
 
 ## Documentation
-- Game rules and structure: `/docs/Company TCG Spielregeln & Aufbau.md`
-- Character lore: `/docs/characterstructure.md`
-- Development log: `/docs/development-log.md`
+- [Development Log](docs/development-log.md): Detailed development progress
+- [Beta Testing Instructions](docs/BetaTestingHub_Instructions.md): Testing guidelines
+- [Character Structure](docs/characterstructure.md): Card character specifications
+
+## Project Status
+Currently in active development. See [development log](docs/development-log.md) for latest updates.
 
 ## Contributing
-Please read our contributing guidelines before submitting pull requests.
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
 ## License
 This project is proprietary and confidential.
+
+## Contact
+- Developer: Arda Harmanci
+- GitHub: [@relstar911](https://github.com/relstar911)
