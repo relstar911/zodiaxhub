@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Card Frame Gradient -->
+    <linearGradient id="card-frame-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50"/>
+      <stop offset="100%" style="stop-color:#3498DB"/>
+    </linearGradient>
+    
+    <!-- Power Sign Mask -->
+    <mask id="power-sign-mask">
+      <rect width="50" height="50" fill="white"/>
+    </mask>
+    
+    <!-- Card Border -->
+    <filter id="card-border-glow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="0" result="offsetblur"/>
+      <feFlood flood-color="#3498DB"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Base Card Frame -->
+  <g id="card-frame">
+    <!-- Background -->
+    <rect id="background" width="400" height="600" rx="20" fill="url(#card-frame-gradient)"/>
+    
+    <!-- Card Border -->
+    <rect id="border" x="5" y="5" width="390" height="590" rx="15" 
+          stroke="#3498DB" stroke-width="2" fill="none" filter="url(#card-border-glow)"/>
+  </g>
+  
+  <!-- Content Areas -->
+  <g id="content-areas">
+    <!-- Header Area -->
+    <g id="header" transform="translate(20, 20)">
+      <!-- Name Container -->
+      <rect id="name-container" width="250" height="40" rx="5" fill="#2C3E50" opacity="0.8"/>
+      
+      <!-- Power Sign Container -->
+      <circle id="power-sign-container" cx="340" cy="20" r="25" fill="#3498DB"/>
+    </g>
+    
+    <!-- Character Image Area -->
+    <g id="character-area" transform="translate(20, 80)">
+      <rect id="character-frame" width="360" height="240" rx="10" fill="#2C3E50" opacity="0.8"/>
+    </g>
+    
+    <!-- Stats Area -->
+    <g id="stats-area" transform="translate(20, 340)">
+      <!-- ATK Container -->
+      <rect id="atk-container" width="170" height="40" rx="5" fill="#2C3E50" opacity="0.8"/>
+      
+      <!-- DEF Container -->
+      <rect id="def-container" x="190" width="170" height="40" rx="5" fill="#2C3E50" opacity="0.8"/>
+    </g>
+    
+    <!-- Description Area -->
+    <g id="description-area" transform="translate(20, 400)">
+      <rect id="description-container" width="360" height="100" rx="10" fill="#2C3E50" opacity="0.8"/>
+    </g>
+    
+    <!-- Synergy Partners Area -->
+    <g id="synergy-area" transform="translate(20, 520)">
+      <rect id="synergy-container" width="360" height="60" rx="10" fill="#2C3E50" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Overlay Effects -->
+  <g id="effects">
+    <!-- Highlight Effects -->
+    <rect id="highlight" width="400" height="600" rx="20" 
+          fill="url(#card-frame-gradient)" opacity="0.1" style="mix-blend-mode: overlay"/>
+  </g>
+</svg>
