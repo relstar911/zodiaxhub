@@ -109,9 +109,16 @@ src/
 docs/
 ├── development-log.md          # Development progress and updates
 ├── project-structure.md        # This file
-├── BetaTestingHub_Instructions.md  # Testing guidelines
-└── characterstructure.md       # Card character specifications
+├── game-rules.md              # Detailed game rules and mechanics
+└── character-lore.md          # Character backgrounds and development
 ```
+
+### Documentation Files Description
+
+- `development-log.md`: Tracks all development progress, features, and changes
+- `project-structure.md`: Comprehensive codebase organization and architecture
+- `game-rules.md`: Core game mechanics, rules, and power sign system
+- `character-lore.md`: Character backgrounds, development, and visualization
 
 ## Key Files Description
 
