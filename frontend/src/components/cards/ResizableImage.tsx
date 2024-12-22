@@ -136,7 +136,6 @@ const ResizableImage: React.FC<ResizableImageProps> = ({
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!dragState.isDragging || !containerRef.current) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
     const parentRect = containerRef.current.parentElement?.getBoundingClientRect();
     if (!parentRect) return;
 
@@ -189,7 +188,6 @@ const ResizableImage: React.FC<ResizableImageProps> = ({
     e.preventDefault();
     if (!containerRef.current) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
     const parentRect = containerRef.current.parentElement?.getBoundingClientRect();
     if (!parentRect) return;
 
@@ -249,7 +247,7 @@ const ResizableImage: React.FC<ResizableImageProps> = ({
       window.removeEventListener('mousemove', handleRotate);
       window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [dragState.isDragging, handleMouseMove, handleRotate, handleMouseUp]);
+  }, [dragState.isDragging, handleMouseMove, handleRotate, handleMouseUp, dragState.startAngle]);
 
   return (
     <ImageContainer

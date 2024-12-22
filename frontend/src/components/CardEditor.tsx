@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { CardData, CardType, CardRarity, PowerSign, CharacterCardData, CardArtwork } from '../types/card';
+import { CardData, CardType, CardRarity, CharacterCardData, CardArtwork } from '../types/card';
 import ResponsiveCardPreview from './cards/ResponsiveCardPreview';
 import PowerSignSelector from './selectors/PowerSignSelector';
 import CardSuggestions from './ai/CardSuggestions';
-import { DeckAnalyzer } from './ai/DeckAnalyzer';
 import ArtworkEditor from './artwork/ArtworkEditor';
 
 interface CardEditorProps {
